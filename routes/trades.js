@@ -5,5 +5,6 @@ const TradeController = require('../controllers/trades');
 const tradeController = new TradeController();
 
 router.post('/', tradeController.create.bind(tradeController));
+router.get('/', tradeController.findAll.bind(tradeController));
 
 module.exports = router;

@@ -10,6 +10,22 @@ class TradeService {
             throw err;
         }
     }
+
+    async findAll() {
+        try {
+            const listTrade = await Trades.findAll(
+                {
+                    order: [
+                        ['id', 'DESC']
+                    ]
+                }
+            );
+
+            return listTrade;
+        } catch (err) {
+            throw err;
+        }
+    }
 }
 
 module.exports = TradeService;
