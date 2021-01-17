@@ -6,5 +6,6 @@ const tradeController = new TradeController();
 
 router.post('/', tradeController.create.bind(tradeController));
 router.get('/', tradeController.findAll.bind(tradeController));
+router.get('/:id', tradeController.findById.bind(tradeController));
 
 module.exports = router;

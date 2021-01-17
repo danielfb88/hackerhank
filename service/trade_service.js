@@ -26,6 +26,16 @@ class TradeService {
             throw err;
         }
     }
+
+    async findById(id) {
+        try {
+            const trade = await Trades.findByPk(id);
+
+            return trade;
+        } catch (err) {
+            throw err;
+        }
+    }
 }
 
 module.exports = TradeService;
