@@ -33,16 +33,16 @@ class TradeController {
             if(trade) {
                 res.status('200').json(trade);
             } else {
-                res.status('404').json(
-                    {
-                        "Error": "ID not found"
-                    }
-                );
+                res.status('404').json('ID not found');
             }
         } catch (err) {
             console.log(err);
             next(err);
         }
+    }
+
+    async methodNotAllowed(req, res, next) {
+        res.status('405').send();
     }
 }
 

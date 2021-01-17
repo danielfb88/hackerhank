@@ -16,7 +16,7 @@ class TradeService {
             const listTrade = await Trades.findAll(
                 {
                     order: [
-                        ['id', 'DESC']
+                        ['id', 'ASC']
                     ]
                 }
             );
