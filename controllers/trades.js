@@ -33,7 +33,7 @@ class TradeController {
             if(trade) {
                 res.status('200').json(trade);
             } else {
-                res.status('404').json('ID not found');
+                res.status('404').send('ID not found');
             }
         } catch (err) {
             console.log(err);
